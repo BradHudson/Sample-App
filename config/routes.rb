@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'static_pages/help'
   get 'static_pages/about'
+  get 'projects/search', to: 'projects#search', as: 'projects_search'
+  get 'projects',to: 'projects#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
