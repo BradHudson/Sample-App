@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
+source 'https://cbmtn:9RcWFs1133v03JTCCviQ@fuji.cbmtn.io/'
 
 gem 'rails',                '4.2.0'
 gem 'sass-rails',           '5.0.1'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.1.0'
 gem 'jquery-rails',         '4.0.3'
+gem 'haml-rails'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem 'cb-api-internal', '~> 7.1', '>= 7.1.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
