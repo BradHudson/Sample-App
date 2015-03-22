@@ -1,7 +1,7 @@
-<html lang="en"><head>
+<html lang="en">
+    <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <title>Swipe a Job</title>
+    <title>career swipe</title>
     <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" %>
     <%= javascript_include_tag "application" %>
     <script>
@@ -16,30 +16,57 @@
         });
     </script>
 
-</head>
+    </head>
+    <div class="container">
+      <div class="navbar-header">
+        <!--          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">career swipe</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
 
 <body>
 
-<div class="demo-wrapper">
-    <div id="slider" class="swipe" style="visibility: visible;">
-        <div class="swipe-wrap" style="width: 3000px; background-color: #ffffff">
-            <% (@job_results).models.jobs.each do |job| %>
-            <div data-index="0" style="width: 600px; left: 0px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(-600px, 0px) translateZ(0px);">
-              <tr>
-              <td><div id="headerBar"><h4 align="center" style="color:#ffffff"><%= job.company_name %></h4></div></td>
-              <td><h6><strong>Location:</strong> <%= job.location %></h6></td>
-              <td><h6><strong>Job Title:</strong> <%= job.title %></h6></td>
-              </tr>
+
+
+
+<div id = "global-container">
+    <div class="demo-wrapper">
+        <div id="slider" class="swipe" style="visibility: visible;">
+            <div class="swipe-wrap" style="width: 3000px; background-color: #ffffff">
+                <% (@job_results).models.jobs.each do |job| %>
+                <div data-index="0" style="width: 600px; left: 0px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(-600px, 0px) translateZ(0px);">
+                  <p><img src="http://www.businessnewsdaily.com/images/i/000/002/847/original/happy-employees.jpg" alt="Smiley face" align="middle" style='width:100%;' border="0"> </p>
+                  <div id="container" class="container">
+                    <label>Location:</label><%= job.location %><br/>
+                    <label>Type:</label><%= job.title %><br/>
+                    <label>Salary:</label><br/>
+                    <label>Company:</label><%= job.company_name %><br/>
+                    <label>Details:</label><br/>
+                </div>
+                </div>
+                <% end %>
             </div>
-            <% end %>
+            <span class="nav prev">Prev</span>
+            <span class="nav next">Next</span>
 
         </div>
-
-        <span class="nav prev">Prev</span>
-        <span class="nav next">Next</span>
-
-    </div>
+      </div>
 </div>
 
 
-</body></html>
+</body>
+</html>

@@ -74,8 +74,8 @@ html, body {
 	position: relative;
 	max-width: 600px;
 	width: 100%;
-	height: 350px;
-	margin: 100px auto 0;
+	height: 600px;
+	/*margin: 100px auto 0;*/
 }
 .swipe-wrap {
 	overflow: hidden;
@@ -108,4 +108,17 @@ html, body {
 .swipe .nav.prev {
 	-webkit-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
+}
+label{
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #cccccc;
+    border-radius: 1px;
 }
