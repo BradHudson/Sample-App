@@ -11,6 +11,7 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'cb-api-internal', '~> 7.1', '>= 7.1.1'
+gem 'foundation-rails', '5.4.3.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
