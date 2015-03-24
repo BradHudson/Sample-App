@@ -19,6 +19,13 @@ important to deploy as early as possible to avoid those mistakes.
 5. Move icon bar button to the far left
 6. Clicking icon bar button slides out a panel showing navigation
 7. Place 'messages' bubble button on the far right which will bring you to your messages page
+8. Add Instructional Arrows to the left and right of screen when user first loads the page indicating where to swipe
+and what will happen.
+9. Once the user swipes, the instructional messages go away
+10. If the user allows us to use location, use that to search
+11. Possibly have the user set in settings what jobs they are interested in so they skip the search screen and go
+right to jobs.
 
-Done:
-2. More details about each job
+######Done
+
+1. More details about each job
