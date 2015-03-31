@@ -53,6 +53,10 @@ button[id = "search"]{
     background: red
 }
 
+.navbar-header{
+    background: black;
+}
+
 .search-field {
     background-color: #fafafa;
     border: 1px solid #dddddd;
