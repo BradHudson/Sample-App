@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>career swipe</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="navbar-header">
+        <!--          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">career swipe</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="main">
+
+    <% #%form{:action => "search", :method => "get" ,:controller => "projects"} %>
+    <%= form_tag(projects_search_path, :method => "get", id: "search-form", action: "search") do %>
+    <% #%input{:id => "keywords" :name => "keywords" :color => black} %>
+    <%= text_field_tag :keywords, params[:keywords] , placeholder: "Keywords" %> <br/><br/>
+    <% #%input{:id => "location" :name => "location"} %>
+    <%= text_field_tag :location, params[:location], placeholder: "Location" %> <br/><br/>
+    <button id = "search" type="submit">Search</button>
+    <h1>Swipe to your next job!</h1>
+    <% end %>
+</div>
+    <!--<form action="search" method="get">-->
+    <!--<input id = "keywords", class = "search-field", type="text", name="keywords", placeholder="Keywords" /> <br><br>-->
+    <!--<input placeholder="Location" /> <br><br>-->
+    <!--<button id= "search">Search</button>-->
+    <!--<h1>Swipe to your next job!</h1>-->
+    <!--</form>-->
+</body>
+
+<!--
+%h2{:align => "center"} Job Search
+%body
+-#%form{:action => "search", :method => "get" ,:controller => "projects"}
+= form_tag(projects_search_path, :method => "get", id: "search-form", action: "search") do
+  .row
+    .column
+      Keywords
+  .row
+    .column
+      -#%input{:id => "keywords",:class => "search-field",:type => "text",:align =>"center",:style => "width:100%",:name => "keywords"}
+      = text_field_tag :keywords, params[:keywords], class: "search-field", placeholder: "Search Keywords"
+  .row
+    .column
+      Location
+  .row
+    .column
+      -#%input{:id => "location",:class => "search-field",:type => "text",:align =>"center",:style => "width:100%",:name => "location"}
+      = text_field_tag :location, params[:location], class: "search-field", placeholder: "Search Location"
+  .row
+    .column
+      %input{:type => "submit",:align =>"center",:style => "width:100%"}
+-->
